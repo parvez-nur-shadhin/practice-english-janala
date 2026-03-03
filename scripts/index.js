@@ -32,34 +32,22 @@ const loadingWords = (levelNo) => {
     .then((res) => res.json())
     .then((data) => displayLevelWords(data.data)); // passing to the display function
 };
-
-// value object skeleton:
-// {
-//     "id": 5,
-//     "level": 1,
-//     "word": "Eager",
-//     "meaning": "আগ্রহী",
-//     "pronunciation": "ইগার"
-// }
-
 // display words By level
 const displayLevelWords = (words) => {
-    console.log(words.length);
-
   // Getting the vocabulary Card container
   const vocabCardContainer = document.getElementById(
     "vocabulary-card-container",
   );
   if(words.length === 0){
     vocabCardContainer.innerHTML = `
-        <div class="col-span-full p-20 space-y-4">
+        <div class="col-span-full p-2 md:p-20 space-y-4">
             <img class="mx-auto" src="./assets/alert-error.png" alt="">
             <p class="text-[#79716B] text-[1rem]">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
             <h2 class="font-medium text-[2rem]">নেক্সট Lesson এ যান</h2>
         </div>
     `;
     return;
-  }
+  };
   vocabCardContainer.innerHTML = "";
 
   // iterating through the words
