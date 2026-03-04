@@ -122,19 +122,6 @@
           আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br />
           যাবে অন্য একটি Level এ ।
         </p>
-        <!-- form -->
-        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <div class="card-body">
-            <fieldset class="fieldset">
-              <label class="label">Email</label>
-              <input type="email" class="input" placeholder="Email" />
-              <label class="label">Password</label>
-              <input type="password" class="input" placeholder="Password" />
-              <div><a class="link link-hover">Forgot password?</a></div>
-              <button class="btn btn-primary mt-4">Login</button>
-            </fieldset>
-          </div>
-        </div>
       </div>
       <!-- Banner -> Right Side -->
       <div>
@@ -157,6 +144,29 @@
       ></div>
     </section>
 
+    <!-- Search Section -->
+    <section class ="max-w-[1920px] mx-auto text-center mt-5 mb-5">
+      <div class="join mx-auto">
+        <div>
+          <label class="input validator join-item">
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </g>
+            </svg>
+            <input id="search-input" type="email" placeholder="Enter The Word" required />
+          </label>
+        </div>
+        <button id="search-button" class="btn btn-primary join-item">Search</button>
+      </div>
+    </section>
+
     <!-- Vocabulary Section -->
     <section
       id="vocabulary-card-container"
@@ -165,9 +175,9 @@
       <div class="col-span-full p-2 md:p-20 space-y-4">
         <img class="mx-auto" src="./assets/alert-error.png" alt="" />
         <p class="text-[#79716B] text-[1rem]">
-          এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+          আপনি এখনো কোন Lesson Select করেন নি...
         </p>
-        <h2 class="font-medium text-[2rem]">নেক্সট Lesson এ যান</h2>
+        <h2 class="font-medium text-[2rem]">একটি Lesson Select করুন।</h2>
       </div>
     </section>
 
@@ -212,7 +222,9 @@
     </section>
 
     <!-- Footer Section -->
-    <section class="mx-auto flex flex-col text-center md:text-start md:flex-row justify-between items-center p-10 md:p-20">
+    <section
+      class="mx-auto flex flex-col text-center md:text-start md:flex-row justify-between items-center p-10 md:p-20"
+    >
       <!-- left Side -->
       <div class="space-y-4">
         <a class="btn btn-ghost text-xl">
@@ -224,15 +236,15 @@
       </div>
 
       <!-- Right Side -->
-       <div class="text-center space-y-5">
-            <h2 class="text-[#18181B] font-medium">Follow Us</h2>
-            <div class="flex gap-4">
-                <img src="./assets/fb-thumb.png" alt="">
-                <img src="./assets/youtube-thumb.png" alt="">
-                <img src="./assets/instagram-thumb.png" alt="">
-                <img src="./assets/github-thumb.png" alt="">
-            </div>
-       </div>
+      <div class="text-center space-y-5">
+        <h2 class="text-[#18181B] font-medium">Follow Us</h2>
+        <div class="flex gap-4">
+          <img src="./assets/fb-thumb.png" alt="" />
+          <img src="./assets/youtube-thumb.png" alt="" />
+          <img src="./assets/instagram-thumb.png" alt="" />
+          <img src="./assets/github-thumb.png" alt="" />
+        </div>
+      </div>
     </section>
 
     <!-- Scripts Linking -->

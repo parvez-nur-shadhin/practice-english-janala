@@ -38,7 +38,7 @@ const displayLevelWords = (words) => {
   const vocabCardContainer = document.getElementById(
     "vocabulary-card-container",
   );
-  if(words.length === 0){
+  if (words.length === 0) {
     vocabCardContainer.innerHTML = `
         <div class="col-span-full p-2 md:p-20 space-y-4">
             <img class="mx-auto" src="./assets/alert-error.png" alt="">
@@ -47,7 +47,7 @@ const displayLevelWords = (words) => {
         </div>
     `;
     return;
-  };
+  }
   vocabCardContainer.innerHTML = "";
 
   // iterating through the words
@@ -82,3 +82,21 @@ const displayLevelWords = (words) => {
 };
 
 loadingAllLevels();
+
+// Search Function implement
+document.getElementById('search-button').addEventListener('click',() =>{
+  const input = document.getElementById('search-input');
+  const inputValue = input.value.trim().toLowerCase();
+  
+  const url = "https://openapi.programming-hero.com/api/words/all";
+  fetch(url)
+  .then(res => res.json())
+  .then(data => {
+    const words = data.data;
+    
+    const matchedWords = words.filter((word) => word.word.toLowerCase().includes(inputValue));
+    
+    displayLevelWords(matchedWords);
+  })
+
+});
